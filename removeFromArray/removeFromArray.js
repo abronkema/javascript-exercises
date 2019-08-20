@@ -1,8 +1,9 @@
 const removeFromArray = function(array, ...args) {
-  // push
-  let removeArray = [...args];
+  // get all args into a separate array for comparison to input array.
+  let removeItemsFromArray = [...args];
   let newArray = array.filter(function(element) {
-    return !removeArray.includes(element);
+    // I only want to keep non-matching elements in this new array
+    return !removeItemsFromArray.includes(element);
   });
   return newArray;
 };
